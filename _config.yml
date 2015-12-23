@@ -39,4 +39,4 @@ disqus_shortname: 'gdgmanagua'
 markdown: kramdown
 
 #excerpt_separator: "<!-- more -->"
-excerpt_separator: "<a name='more'>"
+excerpt_separator: "<a name='more'></a>"
