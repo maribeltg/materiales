@@ -79,6 +79,17 @@ pre {
     }
 }
 
+.icon-white {
+
+    > svg {
+        vertical-align: middle;
+
+        path {
+            fill: $white-color;
+        }
+    }
+}
+
 .pagination {
 	margin: 8px;
 }
