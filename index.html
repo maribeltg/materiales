@@ -5,7 +5,7 @@ layout: default
   <div class="mdl-grid">
   {% if site.post_type == 'highlight' %}
 
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     {% if post.highlight %}
 
     <div class="section-highlight section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
@@ -62,7 +62,7 @@ layout: default
 
   {% else %}
 
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
 
     <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
       <div class="mdl-card__title" {% if post.image %} style="background-image: linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ post.image }}');" {% elsif post.thumbnail %} style="background-image: linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ post.thumbnail }}');" {% endif %}>
@@ -93,4 +93,21 @@ layout: default
 
   {% endif %}
   </div>
+
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
+
 </div>
