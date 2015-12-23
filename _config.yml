@@ -13,7 +13,7 @@ github_username:  maribeltg
 # Layout settings
 header_type: default  # values [ drawer, default ]
 post_type: default #highlight   # values [ highlight, default ]
-pagination_type: ops #default  # values [ ops, default ]
+pagination_type: default  # values [ ops, default ]
 paginate: 6 
 
 more_vert:
