@@ -82,12 +82,20 @@ pre {
 .icon-white {
 
     > svg {
-        vertical-align: middle;
+        vertical-align: top;
+	margin-top: 5px;
+        width: 25px;
+        height: 25px;
 
         path {
-            fill: $white-color;
+            fill: #fff;
         }
     }
+}
+
+.social-link {
+	margin-left: 10px;
+
 }
 
 .pagination {

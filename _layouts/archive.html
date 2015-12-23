@@ -5,7 +5,7 @@ layout: default
   <div class="mdl-grid">
   {% if site.post_type == 'highlight' %}
 
-    {% for post in paginator.posts %}
+    {% for post in page.posts %}
     {% if post.highlight %}
 
     <div class="section-highlight section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
@@ -26,10 +26,9 @@ layout: default
         <i class="material-icons">more_vert</i>
       </button>
       <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn-high">
-        <li><a href="https://facebook.com/sharer.php?u={{ site.url }}{{ post.url | prepend: site.baseurl }}" class="mdl-menu__item" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a></li>
-	<li><a href="https://twitter.com/share?url={{ site.url }}{{ post.url | prepend: site.baseurl }}&text={{ post.title }}&via={{ site.twitter_username }}" class="mdl-menu__item" rel="nofollow" target="_blank" >Twitter</a></li>
-        <li><a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ post.url | prepend: site.baseurl }}&description={{ post.title }}" class="mdl-menu__item" rel="nofollow" target="_blank" >Pinterest</a></li>
-        <li><a href="https://plus.google.com/share?url={{ site.url }}{{ post.url | prepend: site.baseurl }}" class="mdl-menu__item" rel="nofollow" target="_blank" >Google+</a></li>
+        <li><a href="https://www.facebook.com/dialog/share?app_id={app_id}&display=page&href={{ post.url | prepend: site.baseurl }}&redirect_uri={{ site.baseurl }}" class="mdl-menu__item">Facebook</a></li>
+        <li><a href="https://twitter.com/share?url={{ post.url | prepend: site.baseurl }}&text={{ post.title }}&via={{ site.twitter_username }}" class="mdl-menu__item">Twitter</a></li>
+        <li><a href="https://plus.google.com/share?url={{ post.url | prepend: site.baseurl }}" class="mdl-menu__item">Google+</a></li>
       </ul>
 
     </div>
@@ -52,10 +51,9 @@ layout: default
           <i class="material-icons">share</i>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="post-{{ post.id }}">
-        <li><a href="https://facebook.com/sharer.php?u={{ site.url }}{{ post.url | prepend: site.baseurl }}" class="mdl-menu__item" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a></li>
-	<li><a href="https://twitter.com/share?url={{ site.url }}{{ post.url | prepend: site.baseurl }}&text={{ post.title }}&via={{ site.twitter_username }}" class="mdl-menu__item" rel="nofollow" target="_blank" >Twitter</a></li>
-        <li><a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ post.url | prepend: site.baseurl }}&description={{ post.title }}" class="mdl-menu__item" rel="nofollow" target="_blank" >Pinterest</a></li>
-        <li><a href="https://plus.google.com/share?url={{ site.url }}{{ post.url | prepend: site.baseurl }}" class="mdl-menu__item" rel="nofollow" target="_blank" >Google+</a></li>
+          <li><a href="https://www.facebook.com/dialog/share?app_id={app_id}&display=page&href={{ post.url | prepend: site.baseurl }}&redirect_uri={{ site.baseurl }}" class="mdl-menu__item">Facebook</a></li>
+          <li><a href="https://twitter.com/share?url={{ post.url | prepend: site.baseurl }}&text={{ post.title }}&via={{ site.twitter_username }}" class="mdl-menu__item">Twitter</a></li>
+          <li><a href="https://plus.google.com/share?url={{ post.url | prepend: site.baseurl }}" class="mdl-menu__item">Google+</a></li>
         </ul>
       </div>
     </div>
@@ -64,7 +62,7 @@ layout: default
 
   {% else %}
 
-    {% for post in paginator.posts %}
+    {% for post in page.posts %}
 
     <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
       <div class="mdl-card__title" {% if post.image %} style="background-image: linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ post.image }}');" {% elsif post.thumbnail %} style="background-image: linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ post.thumbnail }}');" {% endif %}>
@@ -84,10 +82,9 @@ layout: default
           <i class="material-icons">share</i>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="post-{{ post.id }}">
-        <li><a href="https://facebook.com/sharer.php?u={{ site.url }}{{ post.url | prepend: site.baseurl }}" class="mdl-menu__item" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a></li>
-	<li><a href="https://twitter.com/share?url={{ site.url }}{{ post.url | prepend: site.baseurl }}&text={{ post.title }}&via={{ site.twitter_username }}" class="mdl-menu__item" rel="nofollow" target="_blank" >Twitter</a></li>
-        <li><a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ post.url | prepend: site.baseurl }}&description={{ post.title }}" class="mdl-menu__item" rel="nofollow" target="_blank" >Pinterest</a></li>
-        <li><a href="https://plus.google.com/share?url={{ site.url }}{{ post.url | prepend: site.baseurl }}" class="mdl-menu__item" rel="nofollow" target="_blank" >Google+</a></li>
+          <li><a href="https://www.facebook.com/dialog/share?app_id={app_id}&display=page&href={{ post.url | prepend: site.baseurl }}&redirect_uri={{ site.baseurl }}" class="mdl-menu__item">Facebook</a></li>
+          <li><a href="https://twitter.com/share?url={{ post.url | prepend: site.baseurl }}&text={{ post.title }}&via={{ site.twitter_username }}" class="mdl-menu__item">Twitter</a></li>
+          <li><a href="https://plus.google.com/share?url={{ post.url | prepend: site.baseurl }}" class="mdl-menu__item">Google+</a></li>
         </ul>
       </div>
     </div>
@@ -97,23 +94,5 @@ layout: default
   {% endif %}
   </div>
 
-
-<!-- Pagination links -->
-<div class="mdl-grid">
-  <div class="mdl-layout-spacer"> </div>
-  <div class="pagination">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Previous</a>
-    {% else %}
-      <span class="previous mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>Previous</span>
-    {% endif %}
-    <!--span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span-->
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next previous mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Next</a>
-    {% else %}
-      <span class="next previous mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>Next</span>
-    {% endif %}
-  </div>
-</div>
 
 </div>
