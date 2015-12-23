@@ -100,13 +100,18 @@ layout: default
   <div class="mdl-layout-spacer"> </div>
   <div class="pagination">
     {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Previous</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+     <i class="material-icons">arrow_backward</i>
+	    Previous</a>
     {% else %}
       <span class="previous mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>Previous</span>
     {% endif %}
     <!--span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span-->
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next previous mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Next</a>
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next previous mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+     <i class="material-icons">arrow_forward</i>
+
+	      Next</a>
     {% else %}
       <span class="next previous mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>Next</span>
     {% endif %}

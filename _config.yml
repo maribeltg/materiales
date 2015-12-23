@@ -15,6 +15,7 @@ header_type: default  # values [ drawer, default ]
 post_type: default #highlight   # values [ highlight, default ]
 pagination_type: default #default  # values [ ops, default ]
 paginate: 6 
+permalink: pretty
 
 more_vert:
   option1:
