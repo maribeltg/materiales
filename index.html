@@ -98,7 +98,7 @@ layout: default
 <!-- Pagination links -->
 <div class="mdl-grid">
   <div class="mdl-layout-spacer"> </div>
-  <div class="mdl-cell mdl-cell--4-col pagination">
+  <div class="pagination">
     {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Previous</a>
     {% else %}
