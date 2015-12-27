@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-<div class="post-ribbon"></div>
+
+<div class="post-ribbon" {% if page.image %} style="background-image: linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ page.image }}'); background-size: cover;" {% elsif page.thumbnail %} style="background-image: linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ page.thumbnail }}'); background-size: cover;" {% endif %}></div>
 <main class="post-main mdl-layout__content">
   <div class="post-container mdl-grid">
     <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
