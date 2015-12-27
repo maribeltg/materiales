@@ -51,14 +51,6 @@
       
       <div class="android-navigation-container">
 	  <nav class="android-navigation mdl-navigation">
-	    {% for category in site.categories %}
-	      <a class="mdl-navigation__link mdl-typography--text-uppercase" href="{{ site.baseurl }}/category/{{ category[0] }}">{{ category[0] }}</a>
-	    {% endfor %}
-	</nav>
-       </div>
-
-      <div class="android-navigation-container">
-	  <nav class="android-navigation mdl-navigation">
 	    {% for page in site.pages %}
 	      {% if page.title %}
 	      <a class="mdl-navigation__link mdl-typography--text-uppercase" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
@@ -67,15 +59,6 @@
 	</nav>
        </div>
 
-      <button class="mdl-button mdl-js-button mdl-button--icon" id="menu-lower-left">
-        <i class="material-icons">more_vert</i>
-      </button>
-
-      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-lower-left">
-	    {% for tag in site.tags %}
-		<li><a href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}" class="mdl-menu__item">{{ tag[0] }}</a></li>
-	    {% endfor %}
-      </ul>
     </div>
   </header>
 
