@@ -9,7 +9,7 @@ baseurl: "/blog" # the subpath of your site, e.g. /blog/
 url: "http://maribeltg.github.io" # the base hostname & protocol for your site
 #github_username:  maribeltg
 twitter_username: dospiruletas
-facebook_username: scrapbookingtutorialesdospiruletas
+facebook_username: scrapbookingdospiruletas
 instagram_username: dos_piruletas
 pinterest_username: dospiruletas
 
@@ -19,7 +19,7 @@ header_type: default  # values [ drawer, default ]
 post_type: default #highlight   # values [ highlight, default ]
 pagination_type: default #default  # values [ ops, default ]
 paginate: 6 
-permalink: none
+permalink: /:category/:title
 
 gems:
   - jekyll-archives
