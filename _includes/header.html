@@ -50,12 +50,12 @@
       <div class="mdl-layout-spacer"></div>
 
 	<button id="demo-menu-lower-right"
-		class="mdl-button mdl-js-button mdl-button--icon">
+		class="mdl-button mdl-js-button mdl-button--icon mdl-cell--hode-desktop">
 	  <i class="material-icons">more_vert</i>
 	</button>
 
 	<ul class="mdl-cell--hide-desktop mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-	    for="demo-menu-lower-right" style="z-index: 99;">
+	    for="demo-menu-lower-right">
 	    {% for page in site.pages %}
 	      {% if page.title and page.crafts and page.hidden != true %}
 	      <li class="mdl-menu__item">
