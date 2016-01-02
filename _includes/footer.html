@@ -1,17 +1,38 @@
-<footer class="mdl-mini-footer">
-  <div class="mdl-mini-footer__left-section">
-    <div class="mdl-logo">{{ site.title }}</div>
-    <ul class="mdl-mini-footer__link-list">
-	    <li><a href="{{"/about/cookie-policy/" | prepend: site.url }}">Cookie Policy</a></li>
-	    {% for page in site.pages %}
-	        {% if page.title and page.hidden != true %}
-		   <li><a href="{{ page.url | prepend: site.url }}">{{page.title}}</a></li>
-		{% endif %}
-	    {% endfor %}
+<footer class="mdl-mega-footer">
+  <div class="mdl-mega-footer__middle-section">
 
-            <li><a href="http://www.kimdori.es">Kimidori</a></li>
-            <li><a href="http://ojosdepapelscrap.org">Ojos de Papel</a></li>
-            <li><a href="http://projectlifecafe.blogspot.com">Project Life Café</a></li>
-    </ul>
-  </div>
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">{{ site.title }}</h1>
+      <ul class="mdl-mega-footer__link-list">
+       {% for page in site.pages %}
+           {% if page.title and page.crafts != true %}
+              <li><a href="{{ page.url | prepend: site.url }}">{{page.title}}</a></li>
+           {% endif %}
+       {% endfor %}
+      </ul>
+    </div>
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Crafts</h1>
+      <ul class="mdl-mega-footer__link-list">
+       {% for page in site.pages %}
+           {% if page.title and page.crafts and page.hidden != true %}
+              <li><a href="{{ page.url | prepend: site.url }}">{{page.title}}</a></li>
+           {% endif %}
+       {% endfor %}
+      </ul>
+    </div>
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Equipos de Diseño</h1>
+      <ul class="mdl-mega-footer__link-list">
+         <li><a href="http://www.kimdori.es">Kimidori</a></li>
+         <li><a href="http://ojosdepapelscrap.org">Ojos de Papel</a></li>
+         <li><a href="http://projectlifecafe.blogspot.com">Project Life Café</a></li>
+      </ul>
+    </div>
+
 </footer>
