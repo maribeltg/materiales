@@ -55,7 +55,7 @@
 	</button>
 
 	<ul class="mdl-cell--hide-desktop mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-	    for="demo-menu-lower-right">
+	    for="demo-menu-lower-right" style="z-index: 99;">
 	    {% for page in site.pages %}
 	      {% if page.title and page.crafts and page.hidden != true %}
 	      <li class="mdl-menu__item">
