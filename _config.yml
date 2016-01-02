@@ -45,6 +45,8 @@ more_vert:
     name: Cool Option 3
     link: www.myawesomelink.com
 
+google_analytics_tracking_id: 'UA-71880587-1'
+
 disqus: true
 disqus_shortname: 'dospiruletas'
 
