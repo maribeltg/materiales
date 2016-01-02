@@ -76,6 +76,12 @@
     z-index: 99;
     top: 8px;
     right: 8px;
+
+    .right-bottom {
+	    bottom: 18px;
+	    top: inherit;
+
+    }
   }
 
 }
