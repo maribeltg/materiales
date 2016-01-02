@@ -73,7 +73,7 @@
 
   button {
     position: absolute;
-    z-index: 99;
+    z-index: 98;
     top: 8px;
     right: 8px;
   }
@@ -103,4 +103,8 @@
 .button-right-bottom {
     bottom: 18px;
     top: inherit !important;
+}
+
+.color-black {
+    color: black !important;
 }

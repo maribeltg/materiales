@@ -59,14 +59,14 @@
 	    {% for page in site.pages %}
 	      {% if page.title and page.crafts and page.hidden != true %}
 	      <li class="mdl-menu__item">
-	       <a class="mdl-navigation__link mdl-typography--text-uppercase" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+	       <a class="mdl-navigation__link mdl-typography--text-uppercase color-black" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
               </li>
 	      {% endif %}
 	    {% endfor %}
 	    {% for page in site.pages %}
 	      {% if page.title and page.crafts != true and page.hidden != true %}
 	      <li class="mdl-menu__item">
-	       <a class="mdl-navigation__link mdl-typography--text-uppercase" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+	       <a class="mdl-navigation__link mdl-typography--text-uppercase color-black" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
               </li>
 	      {% endif %}
 	    {% endfor %}
