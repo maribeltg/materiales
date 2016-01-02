@@ -2,8 +2,14 @@
   <div class="mdl-mini-footer__left-section">
     <div class="mdl-logo">{{ site.title }}</div>
     <ul class="mdl-mini-footer__link-list">
-     <li><a href="#">Help</a></li>
-     <li><a href="#">Privacy & Terms</a></li>
+	    <li><a href="{{"/about/cookie-policy/" | prepend: site.url }}">Cookie Policy</a></li>
+	    {% for page in site.pages %}
+	        {% if page.title and page.hidden == false %}
+		   <li><a href="{{ page.url | prepend: site.url }}">{{page.title}}</a></li>
+		{% endif %}
+	    {% endfor %}
+
+            <li><a href="#">Privacy & Terms</a></li>
     </ul>
   </div>
 </footer>
