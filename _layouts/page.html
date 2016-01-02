@@ -14,7 +14,7 @@ layout: default
       <article class="post-content">
         <p>{{ content }}</p>
       </article>
-      {% if site.disqus %}
+      {% if site.disqus and site.pages_have_comments %}
       <div>
         <h3>Comments</h3>
           {% include disqus.html %}

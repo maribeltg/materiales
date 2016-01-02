@@ -47,6 +47,7 @@ more_vert:
 
 google_analytics_tracking_id: 'UA-71880587-1'
 
+pages_have_comments: false
 disqus: true
 disqus_shortname: 'dospiruletas'
 
