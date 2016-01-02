@@ -16,7 +16,7 @@ pinterest_username: dospiruletas
 
 # Layout settings
 header_type: default  # values [ drawer, default ]
-post_type: default #highlight   # values [ highlight, default ]
+post_type: highlight #highlight   # values [ highlight, default ]
 pagination_type: default #default  # values [ ops, default ]
 paginate: 6 
 permalink: /:categories/:title
@@ -45,8 +45,8 @@ more_vert:
     name: Cool Option 3
     link: www.myawesomelink.com
 
-disqus: false
-disqus_shortname: 'gdgmanagua'
+disqus: true
+#disqus_shortname: 'gdgmanagua'
 
 # Build settings
 markdown: kramdown
