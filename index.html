@@ -38,7 +38,7 @@ layout: default
     {% endfor %}
 
     {% for post in paginator.posts %}
-    {% if not post.highlight %}
+    {% unless post.highlight %}
 
     <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
       <div class="mdl-card__title" {% if post.image %} style="background-image: linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ post.image }}');" {% elsif post.thumbnail %} style="background-image: linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ post.thumbnail }}');" {% endif %}>
@@ -63,7 +63,7 @@ layout: default
         </ul>
       </div>
     </div>
-    {% endif %}
+    {% endunless %}
     {% endfor %}
 
   {% else %}
