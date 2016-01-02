@@ -20,7 +20,9 @@ layout: default
         </div>
 	<button data-upgraded=",MaterialButton,MaterialRipple" class="post-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" onclick="location.href='{{ post.url | prepend: site.baseurl }}'">
 		        <i class="material-icons">bookmark</i>
-			      <span class="mdl-button__ripple-container"><span style="width: 160.392px; height: 160.392px; transform: translate(-50%, -50%) translate(38px, 40px);" class="mdl-ripple is-animating"></span></span></button>
+			      <span class="mdl-button__ripple-container"><span style="width: 160.392px; height: 160.392px;"
+			      class="mdl-ripple is-animating"></span></span></button>
+					      <!--transform: translate(-50%, -50%) translate(38px, 40px);-->
         <div class="mdl-card__actions">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
         </div>
