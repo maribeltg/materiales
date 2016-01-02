@@ -64,8 +64,11 @@
 		document.getElementById('catapult-cookie-bar').style.display = 'none';
 		//jQuery("html").css("margin-top","0");
 	}
+	if (!catapultReadCookie("catAccCookies")) {
+		document.getElementById('catapult-cookie-bar').style.display = 'block';
+	}
     </script>
-    <div style="display: block;" id="catapult-cookie-bar">We use cookies to improve your website experience <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="catapultCookie" tabindex="1" onclick="catapultAcceptCookies();">OK</button> <a tabindex="1" href="{{"/about/cookie-policy" | prepend: site.url }}">More info</a></div>
+    <div style="display: none;" id="catapult-cookie-bar">We use cookies to improve your website experience <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="catapultCookie" tabindex="1" onclick="catapultAcceptCookies();">OK</button> <a tabindex="1" href="{{"/about/cookie-policy" | prepend: site.url }}">More info</a></div>
   </body>
 
 </html>
