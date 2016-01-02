@@ -48,16 +48,26 @@
       </nav>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
+
+      <div class="android-navigation-container mdl-cell--hide-phone">
+	  <nav class="android-navigation mdl-navigation">
+	    {% for page in site.pages %}
+	      {% if page.title and page.crafts and page.hidden != true %}
+	      <a class="mdl-navigation__link mdl-typography--text-uppercase" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+	      {% endif %}
+	    {% endfor %}
+	  </nav>
+      </div>
       
       <div class="android-navigation-container mdl-cell--hide-phone">
 	  <nav class="android-navigation mdl-navigation">
 	    {% for page in site.pages %}
-	      {% if page.title and page.hidden != true %}
+	      {% if page.title and page.crafts != true and page.hidden != true %}
 	      <a class="mdl-navigation__link mdl-typography--text-uppercase" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
 	      {% endif %}
 	    {% endfor %}
-	</nav>
-       </div>
+  	  </nav>
+      </div>
 
     </div>
   </header>
