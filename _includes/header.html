@@ -52,7 +52,7 @@
       <div class="android-navigation-container mdl-cell--hide-phone">
 	  <nav class="android-navigation mdl-navigation">
 	    {% for page in site.pages %}
-	      {% if page.title %}
+	      {% if page.title and !page.hidden %}
 	      <a class="mdl-navigation__link mdl-typography--text-uppercase" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
 	      {% endif %}
 	    {% endfor %}
