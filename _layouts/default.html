@@ -35,6 +35,37 @@
         resultsSelector: '#js-search__results' // CSS selector for results container
       });
     </script-->
+    <script>
+	//All the cookie setting stuff
+	function catapultSetCookie(cookieName, cookieValue, nDays) {
+		var today = new Date();
+		var expire = new Date();
+		if (nDays==null || nDays==0) nDays=1;
+		expire.setTime(today.getTime() + 3600000*24*nDays);
+		document.cookie = cookieName+"="+escape(cookieValue)+ ";expires="+expire.toGMTString()+"; path=/";
+	}
+	function catapultReadCookie(cookieName) {
+		var theCookie=" "+document.cookie;
+		var ind=theCookie.indexOf(" "+cookieName+"=");
+		if (ind==-1) ind=theCookie.indexOf(";"+cookieName+"=");
+		if (ind==-1 || cookieName=="") return "";
+		var ind1=theCookie.indexOf(";",ind+1);
+		if (ind1==-1) ind1=theCookie.length; 
+		return unescape(theCookie.substring(ind+cookieName.length+2,ind1));
+	}
+	function catapultDeleteCookie(cookieName) {
+		var today = new Date();
+		var expire = new Date() - 30;
+		expire.setTime(today.getTime() - 3600000*24*90);
+		document.cookie = cookieName+"="+escape(cookieValue)+ ";expires="+expire.toGMTString();
+	}
+	function catapultAcceptCookies() {
+		catapultSetCookie('catAccCookies', true, 30);
+		document.getElementById('catapult-cookie-bar').style.display = 'none';
+		//jQuery("html").css("margin-top","0");
+	}
+    </script>
+    <div style="display: block;" id="catapult-cookie-bar">We use cookies to improve your website experience<button id="catapultCookie" tabindex="1" onclick="catapultAcceptCookies();">OK</button><a tabindex="1" href="{{"/about/cookie-policy" | prepend: site.url }}">More info</a></div>
   </body>
 
 </html>
