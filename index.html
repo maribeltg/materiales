@@ -26,10 +26,10 @@ layout: default
         </div>
       </div>
 
-      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn-high">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="post-high">
         <i class="material-icons">share</i>
       </button>
-      <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn-high">
+      <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="post-high">
         <li><a href="https://facebook.com/sharer.php?u={{ site.url }}{{ post.url | prepend: site.baseurl }}" class="mdl-menu__item" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a></li>
 	<li><a href="https://twitter.com/share?url={{ site.url }}{{ post.url | prepend: site.baseurl }}&text={{ post.title }}&via={{ site.twitter_username }}" class="mdl-menu__item" rel="nofollow" target="_blank" >Twitter</a></li>
         <li><a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ post.url | prepend: site.baseurl }}&description={{ post.title }}" class="mdl-menu__item" rel="nofollow" target="_blank" >Pinterest</a></li>
