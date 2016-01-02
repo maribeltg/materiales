@@ -4,12 +4,14 @@
     <ul class="mdl-mini-footer__link-list">
 	    <li><a href="{{"/about/cookie-policy/" | prepend: site.url }}">Cookie Policy</a></li>
 	    {% for page in site.pages %}
-	        {% if page.title and page.hidden == false %}
+	        {% if page.title and page.hidden != true %}
 		   <li><a href="{{ page.url | prepend: site.url }}">{{page.title}}</a></li>
 		{% endif %}
 	    {% endfor %}
 
-            <li><a href="#">Privacy & Terms</a></li>
+            <li><a href="http://www.kimdori.es">Kimidori</a></li>
+            <li><a href="http://ojosdepapelscrap.org">Ojos de Papel</a></li>
+            <li><a href="http://projectlifecafe.blogspot.com">Project Life Café</a></li>
     </ul>
   </div>
 </footer>
