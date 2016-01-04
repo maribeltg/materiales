@@ -10,7 +10,7 @@ layout: default
 
     <div class="section-highlight section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 
-      <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone" {% if post.image %} style="background-image:linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ post.image }}');" {% endif %}></header>
+      <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone" {% if post.image %} style="background-image: url('{{ post.image }}');" {% endif %}></header>
 
       <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
         <div class="mdl-card__supporting-text">
@@ -36,10 +36,10 @@ layout: default
     {% else %}
 
     <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--12-col-phone">
-      <div class="mdl-card__title" {% if post.image %} style="background-image: linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ post.image }}');" {% elsif post.thumbnail %} style="background-image: linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ post.thumbnail }}');" {% endif %}>
-      <h2 href="{{ post.url | prepend: site.baseurl }}" class="mdl-card__title-text">{{ post.title }}</h2>
+      <div class="mdl-card__title" {% if post.image %} style="background-image:  url('{{ post.image }}');" {% elsif post.thumbnail %} style="background-image: url('{{ post.thumbnail }}');" {% endif %}>
       </div>
       <div class="mdl-card__supporting-text">
+        <a style="text-decoration:none;" href="{{ post.url | prepend: site.baseurl }}" class="bblack"><h6 style="margin-top:14px; font-size:15px; text-transform:uppercase;">{{ post.title }}</h6></a>
         <span>{{ post.date | date: "%b %-d, %Y" }}</span>
         <p>{{ post.excerpt }}</p>
       </div>
@@ -47,7 +47,7 @@ layout: default
         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
       </div>
       <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="post-{{ post.id }}">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--raised button--fab mdl-button--colored" id="post-{{ post.id }}">
           <i class="material-icons">share</i>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="post-{{ post.id }}">
@@ -65,10 +65,10 @@ layout: default
     {% for post in page.posts %}
 
     <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
-      <div class="mdl-card__title" {% if post.image %} style="background-image: linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ post.image }}');" {% elsif post.thumbnail %} style="background-image: linear-gradient(rgba(0,0,0, 0.1) 0%,rgba(0,0,0, 0.6) 100%), url('{{ post.thumbnail }}');" {% endif %}>
-      <h2 href="{{ post.url | prepend: site.baseurl }}" class="mdl-card__title-text">{{ post.title }}</h2>
+      <div class="mdl-card__title" {% if post.image %} style="background-image: url('{{ post.image }}');" {% elsif post.thumbnail %} style="background-image: url('{{ post.thumbnail }}');" {% endif %}>
       </div>
       <div class="mdl-card__supporting-text">
+        <a style="text-decoration:none;" href="{{ post.url | prepend: site.baseurl }}" class="bblack"><h6 style="margin-top:14px; font-size:15px; text-transform:uppercase;">{{ post.title }}</h6></a>
         <span>{{ post.date | date: "%b %-d, %Y" }}</span>
         <p>{{ post.excerpt }}</p>
       </div>
@@ -78,7 +78,7 @@ layout: default
         </a>
       </div>
       <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="post-{{ post.id }}">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--raised button--fab mdl-button--colored" id="post-{{ post.id }}">
           <i class="material-icons">share</i>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="post-{{ post.id }}">
