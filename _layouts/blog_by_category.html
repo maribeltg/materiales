@@ -14,7 +14,7 @@ layout: default
       <div class="mdl-card__supporting-text">
         <a style="text-decoration:none;" href="{{ post.url | prepend: site.baseurl }}" class="bblack"><h6 style="margin-top:14px; font-size:15px; text-transform:uppercase;">{{ post.title }}</h6></a>
         <span>{{ post.date | date: "%b %-d, %Y" }}</span>
-        <p>{{ post.excerpt }}</p>
+        <p>{{ post.excerpt | strip_html | strip_newlines | truncatewords: 39 }}</p>
       </div>
       <div class="mdl-card__actions mdl-card--border">
         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ post.url | prepend: site.baseurl }}">
