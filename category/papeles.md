@@ -1,4 +1,4 @@
 layout: blog_by_category
-category: agendas
+category: papeles
 crafts: true
-permalink: /agendas/
+permalink: /papel-scrapbook/
