@@ -1,3 +1,9 @@
+---
+layout:post
+author: Dos Piruletas - Mari
+categories: papeles
+---
+
 ## Colección Amy Tangerine
 
 Este papel mola mucho
