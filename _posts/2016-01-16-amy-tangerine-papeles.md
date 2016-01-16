@@ -1,6 +1,7 @@
 ---
-layout:post
-author: Dos Piruletas - Mari
+published: false
+layout: post
+title: Amy Tangerine Papeles
 categories: papeles
 ---
 
