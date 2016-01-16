@@ -3,6 +3,7 @@ published: true
 layout: post
 title: Colección Amy Tangerine
 categories: "papel-scrapbook"
+thumbnail: "http://ecx.images-amazon.com/images/I/61nlOjaQRIL._SX425_.jpg"
 ---
 
 
