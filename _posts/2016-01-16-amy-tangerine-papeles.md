@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Amy Tangerine Papeles
+title: Colección Amy Tangerine
 categories: "papel-scrapbook"
 ---
 
