@@ -1,6 +1,9 @@
 ---
 layout: blog_by_category
-category: papeles
+category: "papel-scrapbook"
 crafts: true
-permalink: /papel-scrapbook/
+permalink: "papel-scrapbook"
+published: true
+title: Papeles
 ---
+
