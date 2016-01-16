@@ -2,8 +2,9 @@
 published: true
 layout: post
 title: Amy Tangerine Papeles
-categories: papeles
+categories: "papel-scrapbook"
 ---
+
 
 ## Colección Amy Tangerine
 
