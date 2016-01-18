@@ -43,5 +43,5 @@ En esta tarjeta he utilizado los neocolors para pintar en renito. ¿Verdad que q
 
 ![imagen](/img/tarjetas_pintar_neocolors.jpg)
 
-¡Nos vemos pronto!
+Nos vemos pronto
 
